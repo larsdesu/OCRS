@@ -1,0 +1,592 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+    
+}
+
+body{
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.8) url(../OCRS\ Bg/bgcaution.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: maroon;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li a{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Figtree', sans-serif;
+}
+
+ul li a:hover{
+    color: goldenrod;
+    transition: ease-in-out 0.3s;
+}
+
+.logo img{
+    position: absolute;
+    height: 75px;
+    left: 2%;
+    top: .5%;
+
+    cursor: pointer;
+}
+
+.menu{
+    visibility: hidden;
+}
+
+.menu img{
+    position: absolute;
+    height: 35px;
+    right: 1.5%;
+    top: 2.5%;
+
+    filter: invert();
+    cursor: pointer;
+}
+
+.hidden-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(50%, -50%) scale(0);
+    visibility: hidden;
+}
+
+.clmenu{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    background-color: #560911;
+    width: 200px;
+    height: 260px;
+}
+
+.clmenu a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 25px;
+
+}
+
+.clmenu a:hover{
+    color: goldenrod;
+    transition: ease-in-out 0.3s;
+}
+
+.open-menu{
+    visibility: visible;
+    transform: scale(1);
+}
+
+.content{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-bg{
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    width: 1200px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.content-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.herotext{
+    margin-right: 10px;
+}
+
+.herotext h1{
+    font-size: 7rem;
+    font-weight: 900;
+    color: goldenrod;
+    text-shadow: 8px 4px 2px rgba(0,0,0,0.3);
+}
+
+.herotext h2{
+    margin-left: 20px;
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 800;
+    top: -20px;
+    text-shadow: 8px 4px 2px rgba(0,0,0,0.29);
+
+    color: #0F0F0F;
+}
+
+.herotext p{
+    margin-left: 27.5px;
+    position: relative;
+    top: -22.5px;
+}   
+
+
+.track-wrapper{
+    width: 650px;
+    background-color: whitesmoke;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    /* visibility: hidden; */
+}
+
+.track-area{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 35px;
+}
+
+.track-content{
+    display: flex;
+    justify-content: center;
+    color: maroon;
+}
+
+.uil{
+    position: relative;
+    top: 2.5px;
+    left: -640px;
+
+    font-size: 1.75rem;
+    color: maroon;
+}
+
+.track-content input{
+    padding-left: 50px;
+    width: 490px;
+    height: 40px;
+    border: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.track-btn{
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+
+    font-size: 1rem;
+    font-weight: 700;
+    
+    background-color: maroon;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .track-progress{
+        margin-bottom: 20px;
+    }
+
+.track-header{
+    margin-top: 10px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.shown-id{
+    color: black;
+}
+
+.track-header h1{
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    color: maroon;
+}
+
+
+.open-track{
+    visibility: visible;
+}
+
+.track-report{
+    display: flex;
+    justify-content: center;
+}
+
+.track-report h2{
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.id, .crime, .report-date, .status, .email{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    width: 500px;
+}
+
+.update{
+    display: flex;
+    justify-content: end;
+    margin-top: 15px;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .logo img {
+        transition: top 1s ease, height 1s ease;
+    }
+    ul li a {
+        transition: ease-in-out 1s;
+    } 
+    .content-wrapper{
+        transition: ease-in-out 0.75s;
+    }
+    .herotext{
+        transition: ease-in-out 0.75s;
+    }
+    .texts{
+        transition: ease-in-out 0.75s;
+    }
+    .herotext h1{
+        transition: ease-in-out 0.75s;
+    }
+    .herotext h2{
+        transition: ease-in-out 0.75s;
+    }
+    .herotext p{
+        transition: ease-in-out 0.75s;
+    }   
+    .track-area{
+        transition: ease-in-out 0.75s;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .logo img {
+        top: 1.25%;
+        height: 60px;
+        transition: top 0.75s ease, height 0.75s ease;
+    }
+    ul li a {
+        margin-left: 35px;
+        margin-right: 35px;
+        transition: ease-in-out 0.75s;
+    } 
+    .content{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .content-bg{
+        width: 1200px;
+        height: 450px;
+        border-radius: 10px;
+    }
+    
+    .content-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: ease-in-out 0.75s;
+    }
+    
+    .herotext{
+        display: flex;
+        justify-content: center;
+        transition: ease-in-out 0.75s;
+    }
+    
+    .herotext h1{
+        font-size: 7rem;
+        transition: ease-in-out 0.75s;
+    }
+    .herotext h2{
+        display: flex;
+        margin-left: 20px;
+        font-size: 2.5rem;
+        transition: ease-in-out 0.75s;
+    }
+    .herotext p{
+        margin-left: 27.5px;
+        position: relative;
+        top: -22.5px;
+        transition: ease-in-out 0.75s;
+    }   
+    .track-area{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 5px;
+        transition: ease-in-out 0.75s;
+    }
+    
+    .track-content{
+        display: flex;
+        justify-content: center;
+        color: maroon;
+    }
+    
+    .uil{
+        position: relative;
+        top: 2.5px;
+        left: -640px;
+    
+        font-size: 1.75rem;
+        color: maroon;
+    }
+    .track-content input{
+        padding-left: 50px;
+        width: 490px;
+        height: 40px;
+        border: none;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        margin-left: 30px;
+    }
+    .track-progress{
+        margin-bottom: 20px;
+    }
+
+    .track-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 650px;
+    }
+    .track-header{
+        margin-top: 10px;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .shown-id{
+        color: black;
+    }
+    
+    .track-header h1{
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        color: maroon;
+    }
+    
+    
+    .open-track{
+        visibility: visible;
+    }
+    
+    .track-report{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .track-report h2{
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+    
+    .id, .crime, .report-date, .status, .email{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        width: 500px;
+    }
+    
+    .update{
+        display: flex;
+        justify-content: end;
+        margin-top: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 767px){
+    nav {
+        visibility: hidden;
+    }
+    .menu {
+        visibility: visible;
+    }
+    .logo img {
+        position: absolute;
+        height: 60px;
+        left: 42.5%;
+        top: 1%;
+        transition: top 0.5s ease, height 0.5s ease;
+    }
+    .content{
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .content-bg{
+        width: 1200px;
+        height: 450px;
+        border-radius: 10px;
+    }
+    
+    .content-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: ease-in-out 0.75s;
+    }
+    
+    .herotext{
+        display: flex;
+        justify-content: center;
+        transition: ease-in-out 0.75s;
+    }
+    
+    .herotext h1{
+        font-size: 6rem;
+        transition: ease-in-out 0.75s;
+    }
+    .herotext h2{
+        display: flex;
+        margin-left: 20px;
+        font-size: 2rem;
+        transition: ease-in-out 0.75s;
+    }
+    .herotext p{
+        margin-left: 27.5px;
+        position: relative;
+        top: -22.5px;
+        transition: ease-in-out 0.75s;
+    }   
+    
+    
+    .track-area{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 5px;
+        transition: ease-in-out 0.75s;
+    }
+    
+    .track-content{
+        display: flex;
+        justify-content: center;
+        color: maroon;
+    }
+    
+    .uil{
+        visibility: hidden;
+    }
+    
+    .track-content input{
+        margin-left: 30px;
+        padding-left: 15px;
+        width: 335px;
+        height: 40px;
+    }
+    
+    .track-btn{
+        width: 80px;
+        height: 40px;
+
+        font-size: .90rem;
+        font-weight: 700;
+        }
+    
+    .track-progress{
+        margin-bottom: 20px;
+    }
+
+    .track-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 440px;
+    }
+    
+    .track-header{
+        margin-top: 0px;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .shown-id{
+        color: black;
+    }
+    
+    .track-header h1{
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        color: maroon;
+        font-size: 1.5rem;
+    }
+    
+    
+    .open-track{
+        visibility: visible;
+    }
+    
+    .track-report{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .track-report h2{
+        font-weight: 500;
+        font-size: 1.15rem;
+    }
+    
+    .id, .crime, .report-date, .status, .email{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        width: 350px;
+    }
+    
+    .update{
+        display: flex;
+        justify-content: end;
+        margin-top: 15px;
+    }
+    .update p{
+        font-size: .85rem;
+    }
+}
+

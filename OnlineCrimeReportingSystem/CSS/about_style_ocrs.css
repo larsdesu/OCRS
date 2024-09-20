@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+}
+
+body{
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.8) url(../OCRS\ Bg/bgcaution.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: maroon;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li a{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Figtree', sans-serif;
+}
+
+ul li a:hover{
+    color: goldenrod;
+    transition: ease-in-out 0.3s;
+}
+
+.logo img{
+    position: absolute;
+    height: 75px;
+    left: 2%;
+    top: .5%;
+
+    cursor: pointer;
+}
+
+.menu{
+    visibility: hidden;
+}
+
+.menu img{
+    position: absolute;
+    height: 35px;
+    right: 1.5%;
+    top: 2.5%;
+
+    filter: invert();
+    cursor: pointer;
+}
+
+.hidden-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(50%, -50%) scale(0);
+    visibility: hidden;
+}
+
+.clmenu{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    background-color: #560911;
+    width: 200px;
+    height: 260px;
+}
+
+.clmenu a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 25px;
+
+}
+
+.clmenu a:hover{
+    color: goldenrod;
+    transition: ease-in-out 0.3s;
+}
+
+.open-menu{
+    visibility: visible;
+    transform: scale(1);
+}
+
+
+.ocrs{
+    display: flex;
+}
+
+.ocrs img{
+    width: 250px;
+    margin-right: 20px;
+}
+
+.hdr{
+    display: flex;
+    justify-content: center;
+}
+
+.hdr h1, .mission h1, .vision h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200);
+    color: maroon;
+}
+
+.ocrs-info{
+    margin-top: 30px;
+}
+
+.ocrs-info p{
+    width: 750px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200);
+    text-indent: 20px;
+    text-align: justify;
+}
+
+.mnv-container{
+    display: grid;
+    grid-template-columns: repeat(2, 520px);
+}
+
+.mnv{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.mnv h1{
+    font-family: 'Figtree', sans-serif;
+    font-family: 'Lobster', sans-serif;
+    font-weight: 600;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+}
+
+.mission, .vision{
+    width: 500px;
+    height: auto;
+    margin-bottom: 30px;
+}
+.mission{
+    margin-left: -50px;
+}
+.vision{
+    margin-left: 50px;
+}
+
+.mission-content , .vision-content {
+    width: auto;
+}
+
+.mission p, .vision p{
+    text-indent: 30px;
+    text-align: justify;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200);
+}
+
+.comments-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.outer{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.comments-container{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 320px;
+}
+
+.comments-content{
+    width: auto;
+    background-color: white;
+    padding: 35px 30px 30px 30px;
+
+    border-radius: 33px 0px 85px 39px;
+    -webkit-border-radius: 33px 0px 85px 39px;
+    -moz-border-radius: 33px 0px 85px 39px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.comments h4, .comments p{
+    display: flex;
+    justify-content: center;
+}
+
+.comments p{
+    font-size: .85rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200);
+}
+
+.comments h4{
+    margin-top: 10px;
+    font-size: .75rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200);
+}
+
+.comments i {
+    position: relative;
+    top: 30px;
+    left: 290px;
+    font-size: 1.5rem;
+    color: maroon;
+}
+
+@media screen and (min-width: 1024px) {
+    .logo img {
+        transition: top 1s ease, height 1s ease;
+    }
+    ul li a {
+        transition: ease-in-out 1s;
+    } 
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .logo img {
+        top: 1.25%;
+        height: 60px;
+        transition: top 0.75s ease, height 0.75s ease;
+    }
+    ul li a {
+        margin-left: 35px;
+        margin-right: 35px;
+        transition: ease-in-out 0.75s;
+    } 
+    .ocrs{
+        margin-left: 40px;
+        margin-right: 40px;
+        transition: ease-in-out 0.65s;
+    }
+    .ocrs img{
+        width: 250px;
+        height: auto;
+        margin-right: 20px;
+        transition: ease-in-out 0.65s;
+    }
+    .ocrs-info{
+        margin-top: 15px;
+    }
+    
+    .ocrs-info p{
+        width: auto;
+        text-indent: 15px;
+        transition: ease-in-out 0.65s;
+    }
+    
+    .mnv-container{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        transition: ease-in-out 0.65s;
+        
+    }
+    .mission-content p, .mission-content h1{
+        margin-left: 80px;
+        transition: ease-in-out 0.65s;
+    }
+    .vision-content p{
+        margin-right: 25px;
+        transition: ease-in-out 0.65s;
+    }
+    
+    .description{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mission, .vision{
+        width: 500px;
+        height: auto;
+        margin-bottom: 30px;
+        transition: ease-in-out 0.65s;
+    }
+    .mission{
+        margin-left: -50px;
+        transition: ease-in-out 0.65s;
+    }
+    .vision{
+        margin-left: 50px;
+        transition: ease-in-out 0.65s;
+    }
+    .comments-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .outer{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        margin-left: 10px;
+        margin-right: 10px;
+        transition: ease-in-out 0.65s;
+    }
+    .comments-container{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 320px;
+        transition: ease-in-out 0.65s;
+    }
+    .comments-content{
+        width: auto;
+        background-color: white;
+        padding: 30px 25px 25px 25px;
+        transition: ease-in-out 0.65s;
+    }
+}
+
+@media screen and (max-width: 767px){
+    nav {
+        visibility: hidden;
+    }
+    .menu {
+        visibility: visible;
+    }
+    .logo img {
+        position: absolute;
+        height: 60px;
+        left: 42.5%;
+        top: 1%;
+        transition: top 0.5s ease, height 0.5s ease;
+    }
+    .ocrs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ocrs img{
+        width: 200px;
+        display: flex;
+        margin: auto;
+        margin-bottom: 0;
+        transition: ease-in-out 0.65s;
+    }
+    .ocrs-info{
+        margin-top: 0px;
+    }
+    .ocrs-info p{
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: .90rem;
+        transition: ease-in-out 0.65s;
+    }
+    .mnv-container{
+        display: flex;
+        flex-direction: column;
+        transition: ease-in-out 0.65s;
+    }
+    .mission{
+        margin: 0;
+        width: auto;
+        font-size: .90rem;
+        transition: ease-in-out 0.65s;
+    }
+    .vision{
+        margin: 0;
+        width: auto;
+        font-size: .90rem;
+        transition: ease-in-out 0.65s;
+    }
+    .mnv{
+        margin-bottom: 20px;
+    }
+    .mnv p{
+        text-indent: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        transition: ease-in-out 0.65s;
+    }
+    .comments-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .outer{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .comments-container{
+        margin-bottom: 15px;
+        width: 320px;
+        transition: ease-in-out 0.65s;
+    }
+    .comments-content{
+        width: auto;
+        background-color: white;
+        padding: 30px 25px 25px 25px;
+        transition: ease-in-out 0.65s;
+    } 
+    .comments i {
+        font-size: 1.25rem;
+        transition: ease-in-out 0.65s;
+    }
+}

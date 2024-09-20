@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+}
+
+body{
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.8) url(../OCRS\ Bg/bgcaution.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.title{
+    visibility: hidden;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: maroon;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li a{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Figtree', sans-serif;
+}
+
+ul li a:hover{
+    color: goldenrod;
+    transition: ease-in-out 0.3s;
+}
+
+.logo img{
+    position: absolute;
+    height: 75px;
+    left: 2%;
+    top: .5%;
+
+    cursor: pointer;
+}
+
+.menu{
+    visibility: hidden;
+}
+
+.menu img{
+    position: absolute;
+    height: 35px;
+    right: 1.5%;
+    top: 2.5%;
+
+    filter: invert();
+    cursor: pointer;
+}
+
+.hidden-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(50%, -50%) scale(0);
+    visibility: hidden;
+}
+
+.clmenu{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    background-color: #560911;
+    width: 200px;
+    height: 260px;
+}
+
+.clmenu a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 25px;
+
+}
+
+.clmenu a:hover{
+    color: goldenrod;
+    transition: ease-in-out 0.3s;
+}
+
+.open-menu{
+    visibility: visible;
+    transform: scale(1);
+}
+
+.container{
+    margin-top: 60px;
+}
+
+.contactus{
+    display: flex;
+    justify-content: center;
+}
+
+.inputcontacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+
+    padding: 10px 20px 10px 20px;
+    background-color: whitesmoke;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.inputcontacts button{
+    width: 510px;
+    height: 40px;
+    margin: 5px;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    background-color: maroon;
+    color: white;
+
+    cursor: pointer;
+}
+
+.inputcontacts button:active{
+    opacity: 40%;
+}
+
+.textarea{
+    margin: 5px;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    min-width: 500px;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 10px 0 0 10px;
+}
+
+.type-email{
+    width: 500px;
+    height: 40px;
+    margin: 5px;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding-left: 10px;
+}
+
+.displaycontacts{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.displaycontacts h4{
+    text-align: center;
+}
+
+
+.displaycontacts h1, p{
+    margin: 5px;
+}
+
+.EH{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.EH-Cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-square-facebook, .fa-envelope, .fa-instagram{
+    font-size: 30px;
+    position: relative;
+    top: 12px;
+}
+
+.fb, .mail, .ig{
+    display: flex;
+    justify-content: space-evenly;
+    
+    margin-bottom: 10px;
+}
+
+.displaycontacts h1 a{
+    color: #560911;
+}
+
+.cu{
+    display: flex;
+}
+
+.cu .ttl{
+    display: flex;
+    justify-content: center;
+    color: maroon;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Lobster', sans-serif;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+
+.fa-comment-dots{
+    position: relative;
+    font-size: 3rem;
+    left: 10px;
+    top: -12px;
+    color: goldenrod;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .logo img {
+        transition: top 1s ease, height 1s ease;
+    }
+    ul li a {
+        transition: ease-in-out 1s;
+    } 
+    .container{
+        transition: ease-in-out 0.75s;
+    }
+    .contactus{
+        transition: ease-in-out 0.75s;
+    }
+    .inputcontacts, .displaycontacts{
+        transition: ease-in-out 0.75s;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .logo img {
+        top: 1.25%;
+        height: 60px;
+        transition: top 0.75s ease, height 0.75s ease;
+    }
+    ul li a {
+        margin-left: 35px;
+        margin-right: 35px;
+        transition: ease-in-out 0.75s;
+    } 
+    .container{
+        margin-top: 10px;
+        transition: ease-in-out 0.75s;
+    }
+    .contactus{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: ease-in-out 0.75s;
+    }
+    .inputcontacts, .displaycontacts{
+        width: auto;
+        margin: auto;
+        transition: ease-in-out 0.75s;
+    }
+
+}
+
+
+@media screen and (max-width: 767px){
+    nav {
+        visibility: hidden;
+    }
+    .menu {
+        visibility: visible;
+    }
+    .logo img {
+        position: absolute;
+        height: 60px;
+        left: 42.5%;
+        top: 1%;
+        transition: top 0.5s ease, height 0.5s ease;
+    }
+    .cu .ttl{
+        font-size: 2rem;
+        font-weight: 700;
+        padding-left: 5px;
+        margin-bottom: 5px;
+        transition: ease-in-out 0.5s;
+    }
+    .title{
+        visibility: visible;
+        position: absolute;
+        top: 20px;
+    }
+
+    .title a{
+        text-decoration: none;
+        font-family: 'Figtree', sans-serif;
+        font-weight: 900;
+        font-size: 20px;
+        color: goldenrod;
+    }
+    nav{
+        visibility: hidden;
+    }
+    .container{
+        margin-top: 0px;
+        transition: ease-in-out 0.75s;
+    }
+    .inputcontacts{
+        margin:auto;
+        padding: 10px 10px 10px 20px;
+        width: auto;
+        transition: ease-in-out 0.75s;
+    }
+    .contactus{
+        display: flex;
+        flex-direction: column;
+        transition: ease-in-out 0.75s;
+    }
+    .fa-comment-dots{
+        top: -10px;
+        transition: ease-in-out 0.75s;
+    }
+
+    .inputcontacts button{
+        width: 358px;
+        height: 30px;
+        margin: 5px;
+        transition: ease-in-out 0.75s;
+    }
+    .textarea{
+        margin: 5px;
+        max-width: 350px;
+        min-width: 350px;
+        min-height: 250px;
+        max-height: 250px;
+        transition: ease-in-out 0.75s;
+    }
+    .type-email{
+        width: 350px;
+        height: 30px;
+        margin: 5px;
+        border: 0;
+        transition: ease-in-out 0.75s;
+    }
+    .displaycontacts{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        transition: ease-in-out 0.75s;
+    }
+    .displaycontacts h4{
+        text-align: center;
+    }
+    .displaycontacts h1{
+        font-size: 1.75rem;
+        margin: 5px;
+        transition: ease-in-out 0.75s;
+    }
+    .EH{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        transition: ease-in-out 0.75s;
+    }
+    .EH-Cont{
+        display: flex;
+        justify-content: space-between;
+    }
+    .fa-square-facebook, .fa-envelope, .fa-instagram{
+        font-size: 25px;
+        position: relative;
+        top: 13px;
+        transition: ease-in-out 0.75s;
+    }
+    .fa-comment-dots{
+        position: relative;
+        font-size: 2.15rem;
+        left: 5px;
+        top: -10px;
+        color: goldenrod;
+        transition: ease-in-out 0.75s;
+    }
+
+}

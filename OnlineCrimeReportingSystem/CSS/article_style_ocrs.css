@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+}
+
+body{
+    height: 100vh;
+    max-width: 100%;
+
+    background: rgba(0, 0, 0, 0.8) url(../OCRS\ Bg/bgcaution.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: maroon;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li a{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Figtree', sans-serif;
+}
+
+ul li a:hover{
+    color: goldenrod;
+    transition: ease-in-out 0.3s;
+}
+
+.logo img{
+    position: absolute;
+    height: 75px;
+    left: 2%;
+    top: .5%;
+
+    cursor: pointer;
+}
+
+.menu{
+    visibility: hidden;
+}
+
+.menu img{
+    position: absolute;
+    height: 35px;
+    right: 1.5%;
+    top: 2.5%;
+
+    filter: invert();
+    cursor: pointer;
+}
+
+.hidden-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(50%, -50%) scale(0);
+    visibility: hidden;
+}
+
+.clmenu{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    background-color: #560911;
+    width: 200px;
+    height: 260px;
+}
+
+.clmenu a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 25px;
+
+}
+
+.clmenu a:hover{
+    color: goldenrod;
+    transition: ease-in-out 0.3s;
+}
+
+.open-menu{
+    visibility: visible;
+    transform: scale(1);
+}
+
+
+.content{
+    margin-top: 10px;
+
+}
+
+.article-header{
+    display: flex;
+    justify-content: space-around;
+}
+.header-texts .uil{
+    color: green;
+}
+.header-texts h1{
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: maroon;
+}
+.header-texts p{
+    font-size: 1rem;
+    margin-left: 20px;
+}
+.header-filter{
+    margin-left: 300px;
+}
+.header-filter label{
+    font-weight: 600;
+}
+.header-filter input{
+    margin-left: 5px;
+    padding-left: 10px;
+    width: 300px;
+    height: 35px;
+    border: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 2px;
+}
+.header-filter button{
+    font-weight: 700;
+    width: 70px;
+    height: 35.5px;
+    cursor: pointer;
+    background-color: goldenrod;
+    color: #333;
+    border: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.header-filter button:active{
+    opacity: 40%;
+}
+.article-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.display-case{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.case-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    height: 250px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+}
+.case-card:hover{
+    height: 250px;
+}
+
+.case-image{
+    position: absolute;
+    top: 20px;
+    width: 250px;
+    height: 170px;
+    background: #333;
+    border-radius: 2.5px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.case-card:hover .case-image{
+    top: -50px;
+    scale: .90;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+.case-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-texts{
+    position: absolute;
+    top: 205px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+.case-card:hover .case-texts{
+    top: 120px;
+    height: 250px;
+}
+.case-texts h2{
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+.case-texts p{
+    margin-top: 5px;
+}
+.pagination-content{
+    padding-bottom: 40px;
+}
+
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+.pagination a {
+    display: block;
+    padding: 8px 16px;
+    margin: 4px;
+    text-decoration: none;
+    color: #333;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+.pagination a:hover {
+    background-color: #555;
+    color: white;
+}
+.pagination .current {
+    background-color: maroon;
+    color: white;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 50%;
+    max-height: 50%;
+
+    margin-top: 50px;
+}
+
+.modal img{
+    max-height: 550px;
+    border-radius: 10px;
+}
+
+.modal-texts {
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    font-size: large;
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+@media screen and (min-width: 1024px) {
+    .logo img {
+        transition: top 1s ease, height 1s ease;
+    }
+    ul li a {
+        transition: ease-in-out 1s;
+    } 
+    .content{
+        transition: ease-in-out 0.75s;
+    }
+    .article-header{
+        transition: ease-in-out 0.75s;
+    }
+    .header-texts h1{
+        transition: ease-in-out 0.75s;
+    }
+    .header-filter{
+        transition: ease-in-out 0.75s;
+    }
+    .row {
+        transition: ease-in-out 0.75s;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .logo img {
+        top: 1.25%;
+        height: 60px;
+        transition: top 0.75s ease, height 0.75s ease;
+    }
+    ul li a {
+        margin-left: 35px;
+        margin-right: 35px;
+        transition: ease-in-out 0.75s;
+    } 
+    .content{
+        margin-top: 10px;
+    }
+    .article-header{
+        display: flex;
+        justify-content: space-around;
+        transition: ease-in-out 0.75s;
+    }
+    .header-texts .uil{
+        color: green;
+    }
+    .header-texts h1{
+        font-weight: 800;
+        font-size: 2.15rem;
+        color: maroon;
+        transition: ease-in-out 0.75s;
+    }
+    .header-filter{
+        margin-left: 60px;
+        transition: ease-in-out 0.75s;
+    }
+    .row {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        width: 100%;
+        margin-bottom: 20px;
+        transition: ease-in-out 0.75s;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    nav {
+        visibility: hidden;
+    }
+    .menu {
+        visibility: visible;
+    }
+    .logo img {
+        position: absolute;
+        height: 60px;
+        left: 42.5%;
+        top: 1%;
+        transition: top 0.5s ease, height 0.5s ease;
+    }
+    .content{
+        margin-top: 20px;
+    }
+    .article-header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 40px;
+        transition: ease-in-out 0.75s;
+    }
+    .header-texts h1{
+        font-weight: 800;
+        font-size: 2rem;
+        color: maroon;
+        transition: ease-in-out 0.75s;
+    }
+    .header-texts p{
+        font-size: .90rem;
+        margin-left: 20px;
+        transition: ease-in-out 0.75s;
+    }
+    .header-filter{
+        margin-top: 10px;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+        transition: ease-in-out 0.75s;
+    }
+    .header-filter input{
+        margin-left: 5px;
+        padding-left: 10px;
+        width: 300px;
+        height: 30px;
+        transition: ease-in-out 0.75s;
+    }
+    .header-filter button{
+        margin-left: 5px;
+        height: 30.5px;
+        transition: ease-in-out 0.75s;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+        transition: ease-in-out 0.75s;
+    }
+}
+

@@ -1,0 +1,67 @@
+Murder
+Homicide
+Assault
+Robbery
+Kidnapping
+Rape
+Sexual Assault
+Stalking
+
+Burglary
+Theft
+Arson
+Vandalism
+
+Fraud
+Embezzlement
+Money laundering
+Identity Theft
+Insider Trading
+
+Hacking
+Phishing
+Cyberbullying
+Computer-based fraud
+
+
+Possession of Controlled Substances
+Drug Trafficking
+Drug Manufacturing
+
+Driving Under the Influence of Alcohol (DUI)
+Public Intoxication
+
+Treason
+Espionage
+Tax evasion
+
+Racketeering
+Gang-related Crimes
+Human trafficking
+
+Illegal dumping
+Pollution offenses
+Wildlife trafficking
+
+
+Disorderly conduct
+Rioting
+Prostitution and Solicitation
+
+Speeding
+Reckless driving
+Driving without a license
+
+Child Abuse
+Child Endangerment
+Child Pornography
+
+Forgery and Counterfeiting:
+
+Terrorism
+
+War Crimes
+
+Animal Cruelty
+
+Human Rights Violations
